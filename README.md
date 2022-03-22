@@ -1,4 +1,3 @@
-# MiroTalk P2P
 
 ## Features
 
@@ -92,30 +91,6 @@ $ docker-compose down
 
 ---
 
-## Setup Turn
-
-`Recommended`, for more info about the Turn check out [here](https://webrtc.org/getting-started/turn-server). Just edit [this part](https://github.com/miroslavpejic85/mirotalk/blob/master/.env.template#L9) on your `.env`.
-
----
-
-## API
-
-```bash
-# The response will give you a entrypoint / Room URL for your meeting, where authorization: API_KEY_SECRET.
-$ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.up.railway.app/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-```
-
-## API Documentation
-
-The API documentation uses [swagger](https://swagger.io/) at http://localhost:3000/api/v1/docs. Or check it out on [railway](https://mirotalk.up.railway.app/api/v1/docs) & [heroku](https://mirotalk.herokuapp.com/api/v1/docs).
-
----
-
-## HTTPS
-
-If you want `MiroTalk` to be `reachable` from the `outside` of your local network, you can use a service like [ngrok](https://ngrok.com/) (by editing the [Ngrok part](https://github.com/miroslavpejic85/mirotalk/blob/master/.env.template#L1) on `.env` file) or expose it directly on [HTTPS](app/ssl/README.md)
 
 ## Live demo
 
@@ -136,56 +111,9 @@ https://mirotalk.up.railway.app/
 ---
 
 ## Credits
-
+-   miroslavpejic85 (Microtalk)
 -   ianramzy (html [template](https://cruip.com/demos/neon/))
 -   vasanthv (webrtc-logic)
 -   fabric.js (whiteboard)
-
-## Contributing
-
--   Contributions are welcome and greatly appreciated!
--   Just run before `npm run lint`
-
-## Discussions
-
--   For discussions about the project, join with us on [Discord](https://discord.gg/rgGYfeYW3N)
-
-<br/>
-
-## License
-
-[![AGPLv3](public/images/AGPLv3.png)](LICENSE)
-
-MiroTalk is free and can be modified and forked. But the conditions of the AGPLv3 (GNU Affero General Public License v3.0) need to be respected. In particular modifications need to be free as well and made available to the public. Get a quick overview of the license at [Choose an open source license](https://choosealicense.com/licenses/agpl-3.0/).
-
----
-
-<br/>
-
-## Commercial License or closed source
-
-For commercial use or closed source projects, we can offer licensing under the following terms.
-
-> World-wide, non-exclusive, non-transferable and non-sub-licensable license of MiroTalk as is on https://github.com/miroslavpejic85/mirotalk for use in purchasers products, as long as the resulting software does not stand in concurrence to the MiroTalk itself. Any liability is excluded. The law of the Federal Republic of Italy shall apply exclusively.
-
-The one time fee is 499 EUR net. Please contact miroslav.pejic.85@gmail.com.
-
----
-
-<br>
-
-# Sponsors
-
-Support this project by [becoming a sponsor](https://github.com/sponsors/miroslavpejic85). Your logo will show up here with a link to your website.
-
-[![BroadcastX](public/sponsors/BroadcastX.png)](https://broadcastx.de/)
-
----
-
-<br>
-
-# MiroTalk SFU
-
-Try also [MiroTalk SFU](https://github.com/miroslavpejic85/mirotalksfu), the difference between the two projects you can found [here](https://github.com/miroslavpejic85/mirotalksfu/issues/14#issuecomment-932701999).
 
 ---
