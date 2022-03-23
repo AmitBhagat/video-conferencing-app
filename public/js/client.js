@@ -2904,6 +2904,11 @@ function toggleScreenSharing() {
     }
     screenMediaPromise
         .then((screenStream) => {
+            myVideoStatus = localMediaStream.getVideoTracks()[0].enabled;
+            if(!myVideoStatus){
+             var videoBtn = document.getElementById("videoBtn");
+             videoBtn.click();
+            }
             // stop cam video track on screen share
             stopLocalVideoTrack();
             isScreenStreaming = !isScreenStreaming;
